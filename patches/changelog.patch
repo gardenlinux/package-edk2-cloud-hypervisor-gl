@@ -1,0 +1,11 @@
+--- a/debian/changelog
++++ b/debian/changelog
+@@ -1,3 +1,8 @@
++edk2-cloud-hypervisor-gl (20250503-1) testing; urgency=low
++
++  * rebuild package from https://github.com/cloud-hypervisor/obs-packaging 
++  * rename package
++
+ edk2-cloud-hypervisor (20250503-1) stable unstable bionic focal impish jammy kinetic; urgency=low
+ 
+   * Upgrade to a54f262b
