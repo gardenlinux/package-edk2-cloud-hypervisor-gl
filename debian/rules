@@ -16,22 +16,6 @@ override_dh_strip:
 
 override_dh_auto_build-arch:
 	# /usr/src/packages/SOURCES is OBS specific path
-	mkdir edk2-platforms; \
-	tar xf /usr/src/packages/SOURCES/edk2-platforms-03d1c51.tar.gz -C edk2-platforms --strip-components=1; \
-	for i in edk2-submodule-BaseTools-Source-C-BrotliCompress-brotli.tar.gz \
-		edk2-submodule-CryptoPkg-Library-OpensslLib-openssl.tar.gz \
-		edk2-submodule-MdeModulePkg-Library-BrotliCustomDecompressLib-brotli.tar.gz \
-		edk2-submodule-MdeModulePkg-Universal-RegularExpressionDxe-oniguruma.tar.gz \
-		edk2-submodule-RedfishPkg-Library-JsonLib-jansson.tar.gz \
-		edk2-submodule-UnitTestFrameworkPkg-Library-CmockaLib-cmocka.tar.gz \
-		edk2-submodule-CryptoPkg-Library-MbedTlsLib-mbedtls.tar.gz \
-		edk2-submodule-MdePkg-Library-BaseFdtLib-libfdt.tar.gz \
-		edk2-submodule-MdePkg-Library-MipiSysTLib-mipisyst.tar.gz \
-		edk2-submodule-SecurityPkg-DeviceSecurity-SpdmLib-libspdm.tar.gz \
-		edk2-submodule-UnitTestFrameworkPkg-Library-GoogleTestLib-googletest.tar.gz \
-		edk2-submodule-UnitTestFrameworkPkg-Library-SubhookLib-subhook.tar.gz; do \
-		tar xf /usr/src/packages/SOURCES/$$i; \
-	done; \
 	export PACKAGES_PATH=$(EDK2_PACKAGES_PATH); \
 	. ./edksetup.sh; \
 	make -C BaseTools EXTRA_OPTFLAGS="-Wno-vla-parameter"; \
@@ -40,10 +24,10 @@ override_dh_auto_build-arch:
 
 override_dh_auto_install:
 	
-	install -d debian/edk2-cloud-hypervisor/usr
-	install -d debian/edk2-cloud-hypervisor/usr/share
-	install -d debian/edk2-cloud-hypervisor/usr/share/cloud-hypervisor
-	install -D -m 644 $(EDK2_FD_PATH) debian/edk2-cloud-hypervisor/usr/share/cloud-hypervisor/CLOUDHV_EFI.fd
+	install -d debian/edk2-cloud-hypervisor-gl/usr
+	install -d debian/edk2-cloud-hypervisor-gl/usr/share
+	install -d debian/edk2-cloud-hypervisor-gl/usr/share/cloud-hypervisor
+	install -D -m 644 $(EDK2_FD_PATH) debian/edk2-cloud-hypervisor-gl/usr/share/cloud-hypervisor/CLOUDHV_EFI.fd
 
 override_dh_auto_clean:
 	rm -rf edk2-platforms

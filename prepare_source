@@ -5,5 +5,5 @@ cp -r debian "$dir/src/"
 
 apply_patches
 
-version="20250503-2"
-message="Update to 20250503-2"
+version="20250503-3"
+message="Update to 20250503-3"
