@@ -1,4 +1,4 @@
-git_src --branch edk2-stable202505 https://github.com/tianocore/edk2.git 
+git_src --branch gardenlinux https://github.com/cyberus-technology/edk2.git
 
 # debian specific things
 cp -r debian "$dir/src/"
