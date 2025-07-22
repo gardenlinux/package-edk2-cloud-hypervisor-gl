@@ -1,9 +1,9 @@
-git_src --branch 202505-issue-reverted https://github.com/cyberus-technology/edk2.git
+git_src --branch gardenlinux https://github.com/cyberus-technology/edk2.git
 
 # debian specific things
 cp -r debian "$dir/src/"
 
 apply_patches
 
-version="20250503-6"
-message="Update to 20250503-6"
+version="20250503-7"
+message="Update to 20250503-7"
