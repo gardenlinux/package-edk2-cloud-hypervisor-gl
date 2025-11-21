@@ -6,4 +6,5 @@ cp -r debian "$dir/src/"
 apply_patches
 
 version="20250503-5"
+version_suffix=gl0~bp1877
 message="Update to $version"
