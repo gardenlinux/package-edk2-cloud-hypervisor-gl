@@ -1,3 +1,7 @@
+edk2-cloud-hypervisor (202511-1) experimental unstable testing stable oldstable; urgency=low
+
+  * Upgrade to edk2-stable202511
+
 edk2-cloud-hypervisor (20250503-1) stable unstable bionic focal impish jammy kinetic; urgency=low
 
   * Upgrade to a54f262b

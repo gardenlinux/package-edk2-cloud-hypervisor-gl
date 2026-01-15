@@ -1,3 +1,5 @@
+diff --git a/debian/control b/debian/control
+index 6196a1c..7ed6be7 100644
 --- a/debian/control
 +++ b/debian/control
 @@ -1,10 +1,10 @@
@@ -5,7 +7,7 @@
 +Source: edk2-cloud-hypervisor-gl
  Maintainer: Anatol Belski <anbelski@linux.microsoft.com>
  Homepage: https://github.com/cloud-hypervisor/edk2/tree/ch
- Build-Depends: debhelper, debhelper-compat (= 11), gcc, g++, binutils, python3, python3-setuptools, python3-pexpect, iasl, make, nasm, sed, uuid-dev
+ Build-Depends: debhelper, debhelper-compat (= 11), gcc, g++, binutils, python3, python3-setuptools, python3-pexpect, iasl, make, nasm, sed, uuid-dev, libdistro-info-perl
  
  
 -Package: edk2-cloud-hypervisor

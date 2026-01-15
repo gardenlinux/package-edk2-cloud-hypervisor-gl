@@ -1,9 +1,10 @@
-git_src --branch gardenlinux https://github.com/cyberus-technology/edk2.git
+git_src --branch gardenlinux-staging https://github.com/cyberus-technology/edk2.git
 
 # debian specific things
 cp -r debian "$dir/src/"
 
 apply_patches
 
-version="20250503-5"
+version="202511-2"
+version_suffix="sta0"
 message="Update to $version"
