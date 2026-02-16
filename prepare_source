@@ -4,6 +4,7 @@ git_src --branch gardenlinux https://github.com/cyberus-technology/edk2.git
 cp -r debian "$dir/src/"
 
 apply_patches
+import_upstream_patches
 
-version="20250503-5"
+version="20250503-7"
 message="Update to $version"
