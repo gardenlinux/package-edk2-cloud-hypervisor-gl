@@ -1,10 +1,16 @@
 git_src --branch gardenlinux https://github.com/cyberus-technology/edk2.git
 
+# commit sha from https://github.com/cyberus-technology/edk2/commits/gardenlinux/
+EDK2_COMMIT_SHA="1d892a18e3c6b0e4ead9ab26c9a4f648bbf31476"
+version_increment="0"
+
+git_src_commit "$EDK2_COMMIT_SHA" https://github.com/cyberus-technology/edk2.git
+
 # debian specific things
 cp -r debian "$dir/src/"
 
 apply_patches
-import_upstream_patches
 
-version="20250503-7"
-message="Update to $version"
+version="20260221-0"
+version_suffix="gl${version_increment}"
+message="Update to $version $version_suffix"
