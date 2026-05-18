@@ -12,5 +12,5 @@ cp -r debian "$dir/src/"
 apply_patches
 
 version="20260221-0"
-version_suffix="gl${version_increment}~bp1877"
+version_suffix="gl${version_increment}~bp2150"
 message="Update to $version $version_suffix"
