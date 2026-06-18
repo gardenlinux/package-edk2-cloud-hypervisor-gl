@@ -8,6 +8,7 @@ on:
     branches:
       - main
       - "rel-*"
+      - "sta-*"
 
   workflow_dispatch:
   schedule:
