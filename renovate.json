@@ -1,6 +1,26 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:best-practices"
+  ],
+  "baseBranchPatterns": [
+    "$default",
+    "/^rel-\\d+$/",
+    "/^sta-\\d+$/"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/^prepare_source$/"
+      ],
+      "matchStrings": [
+        "# commit sha from https://github\\.com/cyberus-technology/edk2/commits/(?<currentValue>[^/\\n]+)/\\nEDK2_COMMIT_SHA=\"(?<currentDigest>[a-f0-9]{40})\""
+      ],
+      "depNameTemplate": "cyberus-technology/edk2",
+      "packageNameTemplate": "https://github.com/cyberus-technology/edk2.git",
+      "datasourceTemplate": "git-refs",
+      "versioningTemplate": "loose"
+    }
   ]
 }
