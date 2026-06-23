@@ -1,6 +1,4 @@
-git_src --branch gardenlinux https://github.com/cyberus-technology/edk2.git
-
-# commit sha from https://github.com/cyberus-technology/edk2/commits/gardenlinux/
+# commit sha from https://github.com/cyberus-technology/edk2/commits/gardenlinux-staging/
 EDK2_COMMIT_SHA="67d6f7bd8b7d4e734a30b15f41def3fb7b8ffd83"
 version_increment="1"
 
