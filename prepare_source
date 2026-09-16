@@ -1,14 +1,18 @@
-# commit sha from https://github.com/cyberus-technology/edk2/commits/gardenlinux/
-EDK2_COMMIT_SHA="1d892a18e3c6b0e4ead9ab26c9a4f648bbf31476"
-version_increment="1"
+# vim: ft=bash
 
-git_src_commit "$EDK2_COMMIT_SHA" https://github.com/cyberus-technology/edk2.git
+# release tag from https://github.com/cyberus-technology/cloud-hypervisor/tags
+EDK2_RELEASE_TAG="gardenlinux-release-26-09-16"
+version_increment="0"
+
+DATE_OF_TAG="${EDK2_RELEASE_TAG//[^0-9]/}"
+
+git_src_commit "$EDK2_RELEASE_TAG" https://github.com/cyberus-technology/edk2.git
 
 # debian specific things
 cp -r debian "$dir/src/"
 
 apply_patches
 
-version="20260221-0"
-version_suffix="gl${version_increment}~bp2150"
+version="20260221"
+version_suffix="+${DATE_OF_TAG}-1gl${version_increment}~bp2150"
 message="Update to $version $version_suffix"
