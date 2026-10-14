@@ -1,7 +1,7 @@
 # vim: ft=bash
 
 # release tag from https://github.com/cyberus-technology/cloud-hypervisor/tags
-EDK2_RELEASE_TAG="gardenlinux-release-26-09-16"
+EDK2_RELEASE_TAG="gardenlinux-release-26-10-14"
 version_increment="0"
 
 DATE_OF_TAG="${EDK2_RELEASE_TAG//[^0-9]/}"
