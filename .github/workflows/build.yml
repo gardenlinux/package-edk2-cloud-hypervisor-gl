@@ -16,7 +16,7 @@ on:
 
 jobs:
   build:
-    uses: gardenlinux/package-build/.github/workflows/build.yml@a9cd164016d4c591ac150b292cf3735854614838 # main
+    uses: gardenlinux/package-build/.github/workflows/build.yml@5cfdcc03fa46c679a21d46efb9d1f43d794ad39f # main
     with:
       release: false
       # set publish release to true if we have no PR
